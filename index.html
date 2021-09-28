@@ -8,35 +8,35 @@
     </style>
     </head>
     <body>
-        <section class="content">
-            <div class="container">
-                <div class="calculator">
+        <section id="content" class="content">
+            <div id="container" class="container">
+                <div id="calculator" class="calculator">
                     <div>
-                        <label for="bill">Bill</label><br>
-                        <input id="bill" class="bill-input user-input" type="number">
+                        <label id="bill-label" for="bill">Bill</label><br>
+                        <input id="bill-input" class="bill-input user-input" type="number" value=0.00>
                     </div>
                     <div>
-                        <label for="tip">Tip</label><br>
+                        <label id="tip-label" for="tip">Tip</label><br>
                         <div class="top-container">
-                            <button class="subtract-tip">-</button>
-                            <input class="tip-input user-input" type="number" data-symbol="%">
-                            <button class="add-tip">-</button>
+                            <button id="tip-decrement" class="subtract-tip">-</button>
+                            <input id="tip-selector" class="tip-input user-input" type="number" data-symbol="%" value=15>
+                            <button id="tip-increment" class="add-tip">-</button>
                         </div>
                     </div>
                     <div>
-                        <button class="subtract-people">-</button>
-                        <input class="people-input user-input" type="number" value=1>
-                        <button class="add-people">-</button>
+                        <button id="people-decrement" class="subtract-people">-</button>
+                        <input id="people-selector" class="people-input user-input" type="number" value=1>
+                        <button id="people-increment" class="add-people">-</button>
                     </div>
                 </div>
-                <div class="results">
+                <div id="results" class="results">
                     <div class="tip-container">
-                        <p class="output">Tip</p>
-                        <p>$0.00</p>
+                        <p id="tip-output-label" class="output">Tip</p>
+                        <p id="tip-output">$0.00</p>
                     </div>
                     <div class="total-container">
-                        <p class="output">Total</p>
-                        <p>$0.00</p>
+                        <p id="total-output-label" class="output">Total</p>
+                        <p id="total-output">$0.00</p>
                     </div>
                 </div>
             </div>
