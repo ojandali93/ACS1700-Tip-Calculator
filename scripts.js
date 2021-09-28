@@ -39,9 +39,11 @@ function incrementTip(e){
 }
 
 function decrementTip(e){
-    let currentTip = parseFloat(tipInput.value) - 1;
-    tipInput.value = currentTip++;
-    update();
+    if(parseFloat(tipInput.value) > 0){
+        let currentTip = parseFloat(tipInput.value) - 1;
+        tipInput.value = currentTip++;
+        update();
+    }
 }
 // const bill_input = document.querySelector('.bill');
 // const percentage_input = document.querySelector('.percentage');
