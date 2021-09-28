@@ -1,0 +1,22 @@
+.content {
+    border: 1px solid black;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.input-label {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.user-input {
+    margin-left: 20px;
+}
+
+.results {
+    margin-left: 40px;
+}
