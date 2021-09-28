@@ -17,9 +17,9 @@ tipIncrement.addEventListener('click', incrementTip)
 tipInput.addEventListener('input', update)
 tipDecrement.addEventListener('click', decrementTip)
 
-peopleIncrement.addEventListener('click', update)
+peopleIncrement.addEventListener('click', incrementPeople)
 peopleInput.addEventListener('input', update)
-peopleDecrement.addEventListener('click', update)
+peopleDecrement.addEventListener('click', decrementPeople)
 
 function update(e){
     let bill = parseFloat(billInput.value)
@@ -28,7 +28,7 @@ function update(e){
     let billTotal = bill + (bill * percentTip)
     let tip = (bill * percentTip) / people
     
-    tipOutput.innerHTML = tip.toFixed(2)
+    tipOutput.innerHTML = "$" + tip.toFixed(2) + ((people > 1) ? ' per person' : '')
     totalOutput.innerHTML = billTotal.toFixed(2)
 }
 
@@ -42,6 +42,20 @@ function decrementTip(e){
     if(parseFloat(tipInput.value) > 0){
         let currentTip = parseFloat(tipInput.value) - 1;
         tipInput.value = currentTip++;
+        update();
+    }
+}
+
+function incrementPeople(e){
+    let currentPeople = parseFloat(peopleInput.value) + 1;
+    peopleInput.value = currentPeople++;
+    update();
+}
+
+function decrementPeople(e){
+    if(parseFloat(peopleInput.value) > 0){
+        let currentPeople = parseFloat(peopleInput.value) - 1;
+        peopleInput.value = currentPeople++;
         update();
     }
 }
